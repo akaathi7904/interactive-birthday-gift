@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pakki's Journey | Happy Birthday Pattu Maa ❤️</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌺</text></svg>">
+  
+  <!-- Google Fonts: Luxury Romantic Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Hibiscus Petals Canvas -->
+  <canvas id="petalsCanvas"></canvas>
+
+  <!-- Interactive Floating Hearts & Sparkles Layer -->
+  <div id="interactiveEffects" class="interactive-effects"></div>
+
+  <!-- Ambient Floral Watermark Overlay -->
+  <div class="floral-watermark top-left"></div>
+  <div class="floral-watermark bottom-right"></div>
+
+  <!-- Fixed Top Header / Nav -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <a href="../index.html" class="back-to-bday-btn" title="Back to Birthday Tree Card" aria-label="Back to Birthday Tree Card">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        <span>Card</span>
+      </a>
+      <span class="infinity-logo">11:11 ∞</span>
+      <span class="nav-title">Pakki's Journey</span>
+    </div>
+
+    <!-- Step Progress Dots -->
+    <nav class="step-progress" aria-label="Journey Progress">
+      <button class="step-dot active" data-page="1" title="Pakki's Journey" aria-label="Step 1: Pakki's Journey">
+        <span class="dot-num">01</span>
+        <span class="dot-label">Journey</span>
+      </button>
+      <div class="step-line"></div>
+      <button class="step-dot" data-page="2" title="Your Voice" aria-label="Step 2: Your Voice">
+        <span class="dot-num">02</span>
+        <span class="dot-label">Voice</span>
+      </button>
+      <div class="step-line"></div>
+      <button class="step-dot" data-page="3" title="Our Memories" aria-label="Step 3: Our Memories">
+        <span class="dot-num">03</span>
+        <span class="dot-label">Memories</span>
+      </button>
+      <div class="step-line"></div>
+      <button class="step-dot" data-page="4" title="Happy Birthday" aria-label="Step 4: Happy Birthday">
+        <span class="dot-num">04</span>
+        <span class="dot-label">Surprise</span>
+      </button>
+    </nav>
+
+    <!-- Floating Background Music Controller -->
+    <div class="music-toggle-wrapper">
+      <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle background music" title="Toggle Background Music">
+        <div class="music-icon-wrap">
+          <svg class="music-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3" fill="currentColor"></circle>
+            <circle cx="18" cy="16" r="3" fill="currentColor"></circle>
+          </svg>
+          <span class="sound-wave-bar bar-1"></span>
+          <span class="sound-wave-bar bar-2"></span>
+          <span class="sound-wave-bar bar-3"></span>
+        </div>
+        <span class="music-status-text">Song Playing</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Audio Elements -->
+  <!-- 1. Background Music -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/background-song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 2. Voice Recording -->
+  <audio id="voiceAudio" preload="auto">
+    <source src="assets/voice-recording.mp3" type="audio/mpeg">
+    <source src="assets/voice-recording.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Main Multi-Page Container -->
+  <main class="pages-wrapper">
+
+    <!-- ========================================================
+         PAGE 1: PAKKI'S JOURNEY
+         ======================================================== -->
+    <section id="page-1" class="story-page active" data-page-index="1">
+      <div class="page-inner">
+        
+        <div class="page-badge-wrap">
+          <span class="page-badge">Our Eternal Love Story</span>
+        </div>
+
+        <h1 class="page-heading title-cursive">Pakki's Journey</h1>
+
+        <!-- Couple Photo Romantic Frame -->
+        <div class="photo-frame-container">
+          <div class="ornate-romantic-frame">
+            <div class="frame-corner top-left-corner"></div>
+            <div class="frame-corner top-right-corner"></div>
+            <div class="frame-corner bottom-left-corner"></div>
+            <div class="frame-corner bottom-right-corner"></div>
+            
+            <div class="photo-inner-wrapper">
+              <img src="assets/photos/couple.jpg" alt="Aathi & Nilaathi" class="couple-photo" id="couplePhoto" loading="eager">
+              <div class="photo-shimmer"></div>
+            </div>
+
+            <!-- Vintage Rose Gold Ribbon Tag -->
+            <div class="frame-tag">
+              <span class="tag-heart">❤️</span>
+              <span class="tag-text">Together Forever</span>
+              <span class="tag-heart">❤️</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Details Below Photograph -->
+        <div class="journey-details">
+          <div class="special-symbol-wrapper">
+            <span class="special-symbol glow-text">11:11 ∞</span>
+          </div>
+
+          <div class="anniversary-badge">
+            <svg class="heart-mini-svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <p class="story-start-text">Our story began on 14.05.2025</p>
+            <svg class="heart-mini-svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Next Page Action -->
+        <div class="page-action-wrap">
+          <button class="btn-primary-romantic" onclick="window.PakkiApp.goToPage(2)">
+            <span>Listen to My Heart</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================
+         PAGE 2: YOUR VOICE
+         ======================================================== -->
+    <section id="page-2" class="story-page" data-page-index="2">
+      <div class="page-inner">
+
+        <div class="page-badge-wrap">
+          <span class="page-badge">A Heartfelt Message For You</span>
+        </div>
+
+        <h2 class="page-heading title-cursive">Your Voice</h2>
+
+        <!-- Exact Required Instruction -->
+        <div class="headphone-instruction-card">
+          <div class="instruction-glow-pulse"></div>
+          <span class="instruction-icon">🎧</span>
+          <p class="instruction-text">Pattu Maa, Please Use Headphones ❤️</p>
+        </div>
+
+        <!-- Animated Headphone Interactive Emblem -->
+        <div class="voice-player-container">
+          
+          <div class="headphone-trigger-wrap" id="headphoneBtn" role="button" tabindex="0" aria-label="Play voice recording">
+            <!-- Pulsing Rings -->
+            <div class="pulse-ring ring-1"></div>
+            <div class="pulse-ring ring-2"></div>
+            <div class="pulse-ring ring-3"></div>
+
+            <div class="headphone-disc">
+              <!-- Premium SVG Headphone Icon -->
+              <svg class="headphone-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Headband -->
+                <path d="M22 58C22 34 34 18 50 18C66 18 78 34 78 58" stroke="url(#roseGoldGrad)" stroke-width="6" stroke-linecap="round"/>
+                <!-- Outer glow arc -->
+                <path d="M26 56C26 38 36 24 50 24C64 24 74 38 74 56" stroke="rgba(247, 214, 208, 0.4)" stroke-width="2" stroke-linecap="round"/>
+                <!-- Left Ear Cup -->
+                <rect x="14" y="52" width="16" height="30" rx="8" fill="url(#deepRedGrad)" stroke="url(#roseGoldGrad)" stroke-width="3"/>
+                <rect x="22" y="58" width="5" height="18" rx="2.5" fill="#E8A598"/>
+                <!-- Right Ear Cup -->
+                <rect x="70" y="52" width="16" height="30" rx="8" fill="url(#deepRedGrad)" stroke="url(#roseGoldGrad)" stroke-width="3"/>
+                <rect x="73" y="58" width="5" height="18" rx="2.5" fill="#E8A598"/>
+                <!-- Center Heart / Play Emblem -->
+                <circle cx="50" cy="50" r="14" fill="rgba(122, 12, 30, 0.85)" stroke="url(#roseGoldGrad)" stroke-width="2"/>
+                <polygon id="playSvgIcon" points="46,42 46,58 58,50" fill="#FFFDF8"/>
+                <g id="pauseSvgIcon" style="display:none;">
+                  <rect x="44" y="42" width="4" height="16" rx="2" fill="#FFFDF8"/>
+                  <rect x="52" y="42" width="4" height="16" rx="2" fill="#FFFDF8"/>
+                </g>
+                <defs>
+                  <linearGradient id="roseGoldGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E0A96D"/>
+                    <stop offset="0.5" stop-color="#F7D6D0"/>
+                    <stop offset="1" stop-color="#B76E79"/>
+                  </linearGradient>
+                  <linearGradient id="deepRedGrad" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9E1B32"/>
+                    <stop offset="1" stop-color="#4A0510"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <!-- State Tooltip -->
+              <div class="player-tap-hint" id="playerTapHint">
+                <span class="hint-pulse"></span>
+                <span class="hint-text">Tap to Listen</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soundwave Frequency Visualizer -->
+          <div class="sound-visualizer" id="soundVisualizer">
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+            <span class="viz-bar"></span>
+          </div>
+
+          <!-- Audio Progress Bar -->
+          <div class="audio-progress-wrap">
+            <span class="time-label" id="voiceCurrentTime">0:00</span>
+            <div class="progress-track" id="voiceProgressTrack">
+              <div class="progress-fill" id="voiceProgressFill"></div>
+            </div>
+            <span class="time-label" id="voiceDuration">--:--</span>
+          </div>
+
+        </div>
+
+        <!-- Finished Message (Exact Requirement) -->
+        <div class="voice-finished-card hidden-reveal" id="voiceFinishedCard">
+          <div class="quote-stars">✨ 🌺 ✨</div>
+          <p class="voice-ended-quote">"manasu laa thoonutha pesunen thoonuchu pattu maa"</p>
+          <span class="voice-from-label">— From Aathi with all my soul ❤️</span>
+        </div>
+
+        <!-- Next Action Button (Revealed after voice ends or when ready) -->
+        <div class="page-action-wrap hidden-reveal" id="voiceNextAction">
+          <button class="btn-primary-romantic" onclick="window.PakkiApp.goToPage(3)">
+            <span>Our Memories</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================
+         PAGE 3: OUR MEMORIES
+         ======================================================== -->
+    <section id="page-3" class="story-page" data-page-index="3">
+      <div class="page-inner">
+
+        <div class="page-badge-wrap">
+          <span class="page-badge">Every Smile We Shared</span>
+        </div>
+
+        <h2 class="page-heading title-cursive">Our Memories</h2>
+
+        <!-- Exact Required Subtitle -->
+        <div class="memories-subtitle-wrap">
+          <p class="memories-subtitle">"some our mute video calls but with love and fun"</p>
+        </div>
+
+        <!-- Romantic Responsive Carousel / Gallery -->
+        <div class="memories-gallery-container">
+          
+          <!-- Main Showcase Slide Frame -->
+          <div class="slideshow-frame">
+            <div class="frame-corner top-left-corner"></div>
+            <div class="frame-corner top-right-corner"></div>
+            <div class="frame-corner bottom-left-corner"></div>
+            <div class="frame-corner bottom-right-corner"></div>
+
+            <div class="slides-viewport" id="slidesViewport">
+              <!-- Dynamically populated or rendered slides -->
+              <div class="slides-strip" id="slidesStrip">
+                <!-- Slides injected by JS or fallback pre-rendered -->
+              </div>
+            </div>
+
+            <!-- Slideshow Controls -->
+            <button class="carousel-nav-btn prev-btn" id="prevSlideBtn" aria-label="Previous photo" title="Previous photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </button>
+            <button class="carousel-nav-btn next-btn" id="nextSlideBtn" aria-label="Next photo" title="Next photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </button>
+
+            <!-- Slide Counter Badge -->
+            <div class="slide-counter-badge" id="slideCounterBadge">
+              1 / 9
+            </div>
+
+            <!-- Auto-play status pill -->
+            <button class="slideshow-autoplay-toggle" id="autoplayToggleBtn" title="Toggle Auto Slideshow">
+              <span class="status-dot"></span>
+              <span class="autoplay-label">Auto</span>
+            </button>
+          </div>
+
+          <!-- Thumbnail Strip for Quick Navigation -->
+          <div class="thumbnails-rail" id="thumbnailsRail" aria-label="Photo thumbnails">
+            <!-- Injected via JavaScript -->
+          </div>
+
+        </div>
+
+        <!-- Next Action Button -->
+        <div class="page-action-wrap">
+          <button class="btn-primary-romantic" onclick="window.PakkiApp.goToPage(4)">
+            <span>Your Birthday Surprise</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================
+         PAGE 4: HAPPY BIRTHDAY
+         ======================================================== -->
+    <section id="page-4" class="story-page" data-page-index="4">
+      <div class="page-inner">
+
+        <div class="page-badge-wrap">
+          <span class="page-badge birthday-sparkle">🎂 11 November • Special Day 🎂</span>
+        </div>
+
+        <!-- Exact Required Heading -->
+        <h2 class="page-heading title-cursive birthday-heading">Happy Birthday, Pattu Maa! ❤️</h2>
+
+        <!-- Luxury Romantic Parchment Card -->
+        <div class="love-letter-card">
+          <div class="letter-floral-top">
+            <span class="floral-crest">🌺</span>
+            <div class="crest-line"></div>
+            <span class="crest-heart">❤️</span>
+            <div class="crest-line"></div>
+            <span class="floral-crest">🌺</span>
+          </div>
+
+          <!-- Exact Preserved Tanglish Love Letter -->
+          <div class="letter-body-content">
+            <p class="letter-salutation">Pattu maa,</p>
+            
+            <p class="letter-paragraph">
+              Nee naa enakku avlo pidikume nee nenachathu onakku nadakkum nee ona nambu shelf doubt venaa nee nala padiya varuvaa enakku nambiki iruku, onakku ena nadanthalum oo kooda naa irupen onoda ups and downs laa epa vu mea nee vanthathuku apro enoda life bright ahh aachu.
+            </p>
+            
+            <p class="letter-paragraph">
+              Athu maathri, naa apadi irunthan ahh nu therlaa naa irukaa try pannitea iruken nariya kurt pannieruken nariya thitieruken ala vachueruken soryy dii thangoo.
+            </p>
+            
+            <p class="letter-closing-wish">
+              Happy birthday thangoo ❤️
+            </p>
+          </div>
+
+          <div class="letter-divider">
+            <span class="divider-rose">🌹</span>
+          </div>
+
+          <!-- Below Letter Exact Texts -->
+          <div class="letter-aftermath">
+            
+            <p class="eternal-vow">
+              "No matter how many lifetimes,<br>
+              I'll always choose you. ❤️"
+            </p>
+
+            <div class="final-infinity-symbol">
+              <span class="glow-text">11:11 ∞</span>
+            </div>
+
+            <div class="letter-signature">
+              <p class="sign-with-love">With love,</p>
+              <p class="sign-name">Aathi ❤️</p>
+            </div>
+
+          </div>
+
+          <!-- Bottom Decorative Flourish -->
+          <div class="letter-floral-bottom">
+            <span>❦</span> <span>🌺</span> <span>❦</span>
+          </div>
+        </div>
+
+        <!-- Celebration Action Buttons -->
+        <div class="birthday-actions-wrap">
+          <button class="btn-celebrate-burst" id="celebrateBtn">
+            <span>Shower Love & Petals 🌺✨</span>
+          </button>
+          
+          <button class="btn-replay-journey" onclick="window.PakkiApp.goToPage(1)">
+            <span>Replay Our Journey ↺</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Fullscreen Photo Modal (Lightbox) -->
+  <div id="photoLightbox" class="photo-lightbox" role="dialog" aria-hidden="true">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close photo">&times;</button>
+      <img src="" alt="Enlarged Memory" class="lightbox-image" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- Main JavaScript Application -->
+  <script src="script.js"></script>
+</body>
+</html>
